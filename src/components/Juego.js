@@ -1,33 +1,31 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { deleteJuego } from "../api/juegoApi"
+import { deleteJuego } from "../api/juegoApi";
 
-const Juego = ({categorias, Juego, onDeleteJuego}) => {
-
+const Juego = ({ categorias, juego, onDeleteJuego }) => {
     const delJuego = async () => {
-      const response = await deleteJuego(Juego);
-      if (!response.error) {
-        onDeleteJuego(Juego);
-      }
-    }
-
-    const getCategory = ()=>{
-        const cat = categorias.find((category)=>category.id==Juego.category);
-        if (cat) {
-          return cat.name;
-        } else {
-          return "No clasificado";
+        const response = await deleteJuego(juego.id);
+        if (!response.error) {
+            onDeleteJuego(juego.id);
         }
-    }
+    };
 
-    return  <div>
-              <h1><Link to={"/Juego/"+Juego.id}>{Juego.title}</Link></h1>
-                <img src={Juego.cover} alt="Portada Juego"/>
-              {
-                Juego.author ? <p>{Juego.author}</p> : <p>Autor desconocido</p>
-              }
-              <p>La categoría es: {getCategory()}</p>
-              <button onClick={delJuego}>Borrar Juego</button>
-            </div>
-}
+    const getCategory = () => {
+        const cat = categorias.find((category) => category.id === juego.category);
+        return cat ? cat.name : "No clasificado";
+    };
+
+    return (
+        <div>
+            <h1>
+                <Link to={`/juego/${juego.id}`}>{juego.nombre}</Link>
+            </h1>
+            <img src={juego.url_imagen} alt="Portada Juego" />
+            <p>{juego.author ? juego.author : "Autor desconocido"}</p>
+            <p>La categoría es: {getCategory()}</p>
+            <button onClick={delJuego}>Borrar Juego</button>
+        </div>
+    );
+};
 
 export default Juego;
