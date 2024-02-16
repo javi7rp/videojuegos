@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
-import JuegoList from './JuegoList';
-import JuegoDetail from './JuegoDetail';
-import JuegoValidationForm from './JuegoValidationForm';
-import Aboutus from './Aboutus';
-import ErrorComponent from './ErrorComponent';
+import JuegoList from './components/JuegoList';
+import JuegoDetail from './components/JuegoDetail';
+import JuegoValidationForm from './components/JuegoValidationForm';
+import Aboutus from './components/Aboutus';
+import ErrorComponent from './components/ErrorComponent';
 import { getCategories } from './api/juegoApi';
 
 function App() {
