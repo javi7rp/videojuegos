@@ -22,6 +22,9 @@ function JuegoList({ categorias, juegos, setJuegos}) {
     return (
         <div className="App">
             <div className='results'>
+                <input type='checkbox'>PC</input>
+                <checkbox>PS5</checkbox>
+                <checkbox>XBOX</checkbox>
                 {juegos.length === 0 ? <p>No se han encontrado juegos</p> : ""}
                 {serverError ? <p>{serverError.message}</p> : ""}
                 {juegos.map(juego => <Juego categorias={categorias} juego={juego} key={juego.id}/>)}

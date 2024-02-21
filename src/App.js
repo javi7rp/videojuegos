@@ -23,15 +23,6 @@ function App() {
     downloadCategorias();
   }, []);
 
-  const onSaveJuego = (newJuego) => {
-    setJuegos([...juegos, newJuego]);
-  };
-
-  const onDeleteJuego = (deletedJuego) => {
-    const newJuegos = juegos.filter((juego) => juego.id !== deletedJuego.id);
-    setJuegos(newJuegos);
-  };
-
   return (
     <div className="App">
       <nav>
@@ -40,7 +31,7 @@ function App() {
         <NavLink to="/acercade" activeClassName="active">Acerca de</NavLink>&nbsp;
       </nav>
       <Routes>
-        <Route path="/" element={<JuegoList categorias={categorias} juegos={juegos} setJuegos={setJuegos} onDeleteJuego={onDeleteJuego} />} />
+        <Route path="/" element={<JuegoList categorias={categorias} juegos={juegos} setJuegos={setJuegos}/>} />
         <Route path="/acercade" element={<Aboutus />} />
       </Routes>
     </div>

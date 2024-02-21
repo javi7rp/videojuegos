@@ -1,13 +1,6 @@
 import React from "react";
-import { deleteJuego } from "../api/juegoApi";
 
-const Juego = ({ categorias, juego}) => {
-    
-
-    const getCategory = () => {
-        const cat = categorias.find((categorias) => categorias.id === juego.categorias);
-        return cat ? cat.name : "No clasificado";
-    };
+const Juego = ({ categorias, juego }) => {
 
     return (
         <div>
@@ -16,6 +9,8 @@ const Juego = ({ categorias, juego}) => {
             <p>Descripción: {juego.descripcion}</p>
             <p>Fecha de Lanzamiento: {juego.fecha_lanzamiento}</p>
             <p>Compañía: {juego.compañia}</p>
+            <p>Plataformas: {juego.plataformas.join(", ")}</p>
+            <p>Categorías: {juego.categorias.join(", ")}</p>
             <p>Precio: ${juego.precio}</p>
             {juego.url_video && (
                 <div>
