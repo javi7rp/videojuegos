@@ -1,7 +1,7 @@
 
 export const getJuegos = async () => {
     try {
-        const response = await fetch("http://localhost:3000/Juegos");
+        const response = await fetch("http://localhost:3000/videojuegos");
         return {error: false, data: await response.json()};
     } catch(e) {
         return {error: true, data: "No se ha podido descargar la lista de juegos"}
@@ -10,7 +10,7 @@ export const getJuegos = async () => {
 
 export const getJuego = async (JuegoId) => {
     try {
-        const response = await fetch("http://localhost:3000/Juegos/" + JuegoId);
+        const response = await fetch("http://localhost:3000/videojuegos/" + JuegoId);
         if (response.status === 200) {
             return {error: false, data: await response.json()};
         } else {
@@ -25,7 +25,7 @@ export const getJuego = async (JuegoId) => {
 
 export const getCategories = async () => {
     try {
-        const response = await fetch("http://localhost:3000/categories");
+        const response = await fetch("http://localhost:3000/categorias");
         return {error: false, data: await response.json()};
     } catch(e) {
         return {error: true, data: "No se ha podido cargar las categorias"}
@@ -34,7 +34,7 @@ export const getCategories = async () => {
 
 export const postJuego = async (Juego) => {
     try {
-        const response = await fetch("http://localhost:3000/Juegos/", {
+        const response = await fetch("http://localhost:3000/videojuegos/", {
            method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(Juego)
@@ -50,7 +50,7 @@ export const postJuego = async (Juego) => {
 }
 
 export const deleteJuego = async (Juego) => {
-    const response = await fetch("http://localhost:3000/Juegos/" + Juego.id, {
+    const response = await fetch("http://localhost:3000/videojuegos/" + Juego.id, {
         method: "DELETE"
     });
     

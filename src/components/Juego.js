@@ -1,29 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { deleteJuego } from "../api/juegoApi";
 
-const Juego = ({ categorias, juego, onDeleteJuego }) => {
-    const delJuego = async () => {
-        const response = await deleteJuego(juego.id);
-        if (!response.error) {
-            onDeleteJuego(juego.id);
-        }
-    };
+const Juego = ({ categorias, juego}) => {
+    
 
     const getCategory = () => {
-        const cat = categorias.find((category) => category.id === juego.category);
+        const cat = categorias.find((categorias) => categorias.id === juego.categorias);
         return cat ? cat.name : "No clasificado";
     };
 
     return (
         <div>
-            <h1>
-                <Link to={`/juego/${juego.id}`}>{juego.nombre}</Link>
-            </h1>
-            <img src={juego.url_imagen} alt="Portada Juego" />
-            <p>{juego.author ? juego.author : "Autor desconocido"}</p>
-            <p>La categoría es: {getCategory()}</p>
-            <button onClick={delJuego}>Borrar Juego</button>
+             <h2>{juego.nombre}</h2>
+            <img src={juego.url_imagen} alt={juego.nombre} />
+            <p>Descripción: {juego.descripcion}</p>
+            <p>Fecha de Lanzamiento: {juego.fecha_lanzamiento}</p>
+            <p>Compañía: {juego.compañia}</p>
+            <p>Precio: ${juego.precio}</p>
+            {juego.url_video && (
+                <div>
+                    <p>Tráiler:</p>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={juego.url_video}
+                        title="Tráiler del juego"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                    </div>
+            )}
         </div>
     );
 };

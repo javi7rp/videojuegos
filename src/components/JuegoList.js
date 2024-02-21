@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Juego from './Juego';
 import { getJuegos } from '../api/juegoApi';
 
-function JuegoList({ categorias, juegos, setJuegos, onDeleteJuego }) {
+function JuegoList({ categorias, juegos, setJuegos}) {
     const [serverError, setServerError] = useState({ error: false, message: "" });
 
     const downloadJuegos = async () => {
@@ -24,7 +24,7 @@ function JuegoList({ categorias, juegos, setJuegos, onDeleteJuego }) {
             <div className='results'>
                 {juegos.length === 0 ? <p>No se han encontrado juegos</p> : ""}
                 {serverError ? <p>{serverError.message}</p> : ""}
-                {juegos.map(juego => <Juego categorias={categorias} juego={juego} key={juego.id} onDeleteJuego={onDeleteJuego} />)}
+                {juegos.map(juego => <Juego categorias={categorias} juego={juego} key={juego.id}/>)}
             </div>
         </div>
     );

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 import JuegoList from './components/JuegoList';
-import JuegoDetail from './components/JuegoDetail';
-import JuegoValidationForm from './components/JuegoValidationForm';
 import Aboutus from './components/Aboutus';
-import ErrorComponent from './components/ErrorComponent';
 import { getCategories } from './api/juegoApi';
 
 function App() {
@@ -44,10 +41,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<JuegoList categorias={categorias} juegos={juegos} setJuegos={setJuegos} onDeleteJuego={onDeleteJuego} />} />
-        <Route path="/juego/:juegoId" element={<JuegoDetail />} />
-        <Route path="/nuevo" element={<JuegoValidationForm categorias={categorias} onSaveJuego={onSaveJuego} />} />
         <Route path="/acercade" element={<Aboutus />} />
-        <Route path="*" element={<ErrorComponent />} />
       </Routes>
     </div>
   );
