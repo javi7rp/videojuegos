@@ -1,27 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
-import JuegoList from './components/JuegoList';
 import Aboutus from './components/Aboutus';
-import { getCategories } from './api/juegoApi';
+import InicioJuegos from './components/InicioJuegos';
 
 function App() {
-  const [juegos, setJuegos] = useState([]);
-  const [categorias, setCategorias] = useState([]);
-
-  useEffect(() => {
-    const downloadCategorias = async () => {
-      try {
-        const response = await getCategories();
-        if (!response.error) {
-          setCategorias(response.data);
-        }
-      } catch (error) {
-        console.error('Error al descargar categorías:', error);
-      }
-    };
-
-    downloadCategorias();
-  }, []);
 
   return (
     <div className="App">
@@ -31,7 +12,7 @@ function App() {
         <NavLink to="/acercade" activeClassName="active">Acerca de</NavLink>&nbsp;
       </nav>
       <Routes>
-        <Route path="/" element={<JuegoList categorias={categorias} juegos={juegos} setJuegos={setJuegos}/>} />
+        <Route path="/" element={<InicioJuegos/>} />
         <Route path="/acercade" element={<Aboutus />} />
       </Routes>
     </div>

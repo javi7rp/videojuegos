@@ -1,6 +1,6 @@
 import React from "react";
 
-const Juego = ({ categorias, juego }) => {
+const Juego = ( juego ) => {
 
     return (
         <div>

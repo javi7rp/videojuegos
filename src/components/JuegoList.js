@@ -2,35 +2,34 @@ import React, { useEffect, useState } from 'react';
 import Juego from './Juego';
 import { getJuegos } from '../api/juegoApi';
 
-function JuegoList({ categorias, juegos, setJuegos}) {
-    const [serverError, setServerError] = useState({ error: false, message: "" });
+function JuegoList({ busqueda = '', busquedaCategorias = [''], busquedaPlataformas = [''] }) {
 
-    const downloadJuegos = async () => {
-        const response = await getJuegos();
-        if (!response.error) {
-            setJuegos(response.data);
-        } else {
-            setJuegos([]);
-            setServerError(response.data);
-        }
-    }
+    const [videojuegos, setVideojuegos] = useState([])
 
     useEffect(() => {
-        downloadJuegos();
-    }, []);
+        getJuegos({ busqueda, busquedaCategorias, busquedaPlataformas })
+            .then(videojuegos => setVideojuegos(videojuegos))
+    }, [busqueda, busquedaCategorias, busquedaPlataformas]);
 
     return (
-        <div className="App">
-            <div className='results'>
-                <input type='checkbox'>PC</input>
-                <checkbox>PS5</checkbox>
-                <checkbox>XBOX</checkbox>
-                {juegos.length === 0 ? <p>No se han encontrado juegos</p> : ""}
-                {serverError ? <p>{serverError.message}</p> : ""}
-                {juegos.map(juego => <Juego categorias={categorias} juego={juego} key={juego.id}/>)}
-            </div>
+        <div>
+            {videojuegos.map(({ id, nombre, descripcion, fecha_lanzamiento, compañia, plataformas, categorias, precio, url_imagen, url_video }) =>
+                <Juego
+                    key={id}
+                    id={id}
+                    nombre={nombre}
+                    descripcion={descripcion}
+                    fechaLanzamiento={fecha_lanzamiento}
+                    compañia={compañia}
+                    plataformas={plataformas}
+                    categorias={categorias}
+                    precio={precio}
+                    url_imagen={url_imagen}
+                    url_video={url_video}
+                />
+            )}
         </div>
-    );
+    )
 }
 
 export default JuegoList;
