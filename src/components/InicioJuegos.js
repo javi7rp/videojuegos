@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { JuegoList } from './JuegoList'
-import { CheckGroup } from './CheckGroup'
-import { getCategorias, getPlataformas } from '../api/juegoApi'
+import JuegoList from './JuegoList'
+import CheckGroup from './CheckGroup'
+import { getCategorias } from '../api/getCategorias'
+import { getPlataformas } from '../api/getPlataformas'
 
 
 const InicioJuegos = () => {

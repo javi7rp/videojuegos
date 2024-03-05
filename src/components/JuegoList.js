@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Juego from './Juego';
-import { getJuegos } from '../api/juegoApi';
+import { getJuegos } from '../api/getJuegos';
 
 function JuegoList({ busqueda = '', busquedaCategorias = [''], busquedaPlataformas = [''] }) {
 
