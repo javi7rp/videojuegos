@@ -1,5 +1,5 @@
 export const updateVideojuego = (videojuegoActualizado) => {
-    const dbVideojuegos = `http://localhost:3000/videojuegos/${videojuegoActualizado.id}`
+    const dbVideojuegos = `http://localhost:3003/videojuegos/${videojuegoActualizado.id}`
 
     const requestOptions = {
         method: 'PUT',
