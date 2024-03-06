@@ -16,7 +16,7 @@ const EditJuego = () => {
         id: '',
         nombre: '',
         descripcion: '',
-        fechaLanzamiento: '',
+        fecha_lanzamiento: '',
         compañia: '',
         plataformas: [],
         categorias: [],
@@ -61,8 +61,8 @@ const EditJuego = () => {
                         <strong><label htmlFor="descripcion">Descripcion:</label></strong>
                         <input type="text" id="descripcion" name="descripcion" defaultValue={juegoEditado.descripcion} onChange={handleChange}/>
     
-                        <strong><label htmlFor="fechaLanzamiento">Fecha De lanzamiento:</label></strong>
-                        <input type="date" id="fechaLanzamiento" name="fechaLanzamiento" defaultValue={juegoEditado.fechaLanzamiento.replaceAll('/', '-')} onChange={handleChange(juegoEditado, setJuegoEditado)} required/>
+                        <strong><label htmlFor="fecha_lanzamiento">Fecha De lanzamiento:</label></strong>
+                        <input type="date" id="fecha_lanzamiento" name="fecha_lanzamiento" defaultValue={juegoEditado.fecha_lanzamiento.replaceAll('/', '-')} onChange={handleChange(juegoEditado, setJuegoEditado)} required/>
                     </div>
     
                     <div>

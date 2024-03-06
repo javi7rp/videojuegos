@@ -4,8 +4,8 @@ export const getJuegos = ({busqueda = '', busquedaCategorias = [''], busquedaPla
   return fetch(dbVideojuegos).then(res => res.json()).then(response => {
     const data = response
     const videojuegos = data.map(videojuego => {
-        const {id, nombre, descripcion, fechaLanzamiento, compañia, plataformas, categorias, precio, portada, trailer} = videojuego
-        return {id, nombre, descripcion, fechaLanzamiento, compañia, plataformas, categorias, precio, portada, trailer}
+        const {id, nombre, descripcion, fecha_lanzamiento, compañia, plataformas, categorias, precio, url_imagen, url_video} = videojuego
+        return {id, nombre, descripcion, fecha_lanzamiento, compañia, plataformas, categorias, precio, url_imagen, url_video}
     })
 
     let coincidencias = videojuegos

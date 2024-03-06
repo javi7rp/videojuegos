@@ -10,7 +10,7 @@ const InsertarJuego = () => {
         id: 0,
         nombre: "",
         descripcion: "",
-        fechaLanzamiento: "",
+        fecha_lanzamiento: "",
         compañia: "",
         plataformas: [],
         categorias: [],
@@ -40,8 +40,8 @@ const InsertarJuego = () => {
                         <strong><label htmlFor="descripcion">Descripcion:</label></strong>
                         <input type="text" id="descripcion" name="descripcion" onChange={handleChange}/>
 
-                        <strong><label htmlFor="fechaLanzamiento">Fecha De lanzamiento:</label></strong>
-                        <input type="date" id="fechaLanzamiento" name="fechaLanzamiento" onChange={handleChange(nuevoJuego, setNuevoJuego)} required/>
+                        <strong><label htmlFor="fecha_lanzamiento">Fecha De lanzamiento:</label></strong>
+                        <input type="date" id="fecha_lanzamiento" name="fecha_lanzamiento" onChange={handleChange(nuevoJuego, setNuevoJuego)} required/>
 
                         <strong><label htmlFor="compañia">Compañia:</label></strong>
                         <input type="text" id="compañia" name="compañia" onChange={handleChange(nuevoJuego, setNuevoJuego)}/>
@@ -49,42 +49,39 @@ const InsertarJuego = () => {
                         <strong><label htmlFor="precio">Precio:</label></strong>
                         <input type="number" step="0.01" id="precio" name="precio" onChange={handleChange(nuevoJuego, setNuevoJuego)} required/>
 
-                        <strong><label htmlFor="url_imagen">Portada:</label></strong>
+                        <strong><label htmlFor="url_imagen">Imagen:</label></strong>
                         <input type="text" id="url_imagen" name="url_imagen" onChange={handleChange(nuevoJuego, setNuevoJuego)}/>
 
-                        <strong><label htmlFor="url_video">Trailer:</label></strong>
+                        <strong><label htmlFor="url_video">Video:</label></strong>
                         <input type="text" id="url_video" name="url_video" onChange={handleChange(nuevoJuego, setNuevoJuego)}/>
                     </div>
 
                     <div className='contenedorCheckboxes'>
-                        <div id='titulos'>
-                            <strong><label htmlFor="categorias">Categorias:</label></strong>
-                            <strong><label htmlFor="plataformas">Plataformas:</label></strong>
-                        </div>
+                       
 
-                        <div id='checkboxes'>
+                            <strong><label htmlFor="categorias">Categorias:</label></strong>
                             <div className='grupoCheckbox' id='categorias' name="categorias">
                                 {
-                                    categoriasOptions.map(({id, categoria}) => {
+                                    categoriasOptions.map(({id, name}) => {
                                         return <div key={id}>
-                                            <input type='checkbox' id={categoria} name='categorias' onChange={formHandleChecked(nuevoJuego, setNuevoJuego)}/>
-                                            <label htmlFor={categoria}>{categoria}</label>
+                                            <input type='checkbox' id={name} name='categorias' onChange={formHandleChecked(nuevoJuego, setNuevoJuego)}/>
+                                            <label htmlFor={name}>{name}</label>
                                         </div>
                                     })
                                 }
                             </div>
 
+                            <strong><label htmlFor="plataformas">Plataformas:</label></strong>
                             <div className='grupoCheckbox' id='plataformas' name="plataformas">
                                 {
-                                    plataformasOptions.map(({id, plataforma}) => {
+                                    plataformasOptions.map(({id, name}) => {
                                         return <div key={id}>
-                                            <input type='checkbox' id={plataforma} name='plataformas' onChange={formHandleChecked(nuevoJuego, setNuevoJuego)}/>
-                                            <label htmlFor={plataforma}>{plataforma}</label>
+                                            <input type='checkbox' id={name} name='plataformas' onChange={formHandleChecked(nuevoJuego, setNuevoJuego)}/>
+                                            <label htmlFor={name}>{name}</label>
                                         </div>
                                     })
                                 }
                             </div>
-                        </div>
                     </div>
                 </div>
                 <br/>

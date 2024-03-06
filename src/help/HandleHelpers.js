@@ -49,15 +49,25 @@ export const handleChange = (nuevoJuego, setNuevoJuego) => (evt) => {
 export const handleSubmit = ({juego, peticion = -1}) => async (e) => {
     e.preventDefault()
     console.log(peticion)
-    juego.fechaLanzamiento = juego.fechaLanzamiento.replaceAll('-', '/')
+    console.log(juego)
+    juego.fecha_lanzamiento = juego.fecha_lanzamiento.replaceAll('-', '/')
     juego.precio = parseFloat(juego.precio, 10)
     
     switch(peticion){
         //Post
         case 0:
             getJuegos({}).then(videojuegos => {
-                const videojuego = { ...juego, id: videojuegos.length.toLocaleString() };
-                postVideojuego(videojuego)
+                //const videojuego = { ...juego, id: videojuegos.length.toLocaleString() };
+                //postVideojuego(videojuego)
+
+                const ultimoID = videojuegos.reduce((maxID, videojuego) => {
+                    return Math.max(maxID, parseInt(videojuego.id, 10));
+                }, 0);
+                // Incrementa el ID más alto en uno para obtener un nuevo ID único
+                const nuevoID = ultimoID + 1;
+                const videojuego = { ...juego, id: nuevoID.toString() };
+                console.log(videojuego);
+                postVideojuego(videojuego);
             })
             break;
 

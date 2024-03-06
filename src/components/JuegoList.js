@@ -19,7 +19,7 @@ function JuegoList({ busqueda = '', busquedaCategorias = [''], busquedaPlataform
                     id={id}
                     nombre={nombre}
                     descripcion={descripcion}
-                    fechaLanzamiento={fecha_lanzamiento}
+                    fecha_lanzamiento={fecha_lanzamiento}
                     compañia={compañia}
                     plataformas={plataformas}
                     categorias={categorias}

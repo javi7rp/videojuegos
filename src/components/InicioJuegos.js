@@ -25,10 +25,10 @@ const InicioJuegos = () => {
             <label for="categorias">Categorías</label>
             <div>
                 {
-                    categoriasOptions.map(({ id, categoria }) => {
+                    categoriasOptions.map(({ id, name }) => {
                         return <CheckGroup
                             id={id}
-                            attr={categoria}
+                            attr={name}
                             busquedaAttr={busquedaCategorias}
                             setBusquedaAttr={setBusquedaCategorias} />
                     })
@@ -37,10 +37,10 @@ const InicioJuegos = () => {
             <label for="plataformas">Plataformas</label>
             <div>
                 {
-                    plataformasOptions.map(({ id, plataforma }) => {
+                    plataformasOptions.map(({ id, name }) => {
                         return <CheckGroup
                             id={id}
-                            attr={plataforma}
+                            attr={name}
                             busquedaAttr={busquedaPlataformas}
                             setBusquedaAttr={setBusquedaPlataformas} />
                     })
