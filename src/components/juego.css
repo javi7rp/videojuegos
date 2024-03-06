@@ -19,7 +19,6 @@
   
   /* Estilos para el título del juego */
   .contenedorVideojuego h2 {
-    color: #fff; /* Texto blanco */
     margin-bottom: 10px;
   }
   
@@ -30,8 +29,7 @@
   }
   
   /* Estilos para el texto del juego */
-  .contenedorVideojuego p {
-    color: #fff; /* Texto blanco */
+  .contenedorVideojuego p { 
     margin-top: 10px;
   }
   
@@ -53,7 +51,7 @@
   
   /* Estilos para el contenido del modal */
   .contenidoModal {
-    background-color: #fff; /* Fondo blanco */
+    background-color: #1f9ad3;
     padding: 20px;
     border-radius: 10px;
   }

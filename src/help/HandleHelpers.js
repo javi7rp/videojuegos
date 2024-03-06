@@ -1,7 +1,6 @@
 import { deleteVideojuego } from "../api/deleteJuego";
 import { getJuegos } from "../api/getJuegos"
 import { postVideojuego } from "../api/postJuego"
-import { updateVideojuego } from "../api/updateJuego";
 
 
 export const handleChecked = (attrElegidas, setAttrElegidas, isChecked, setIsChecked) => (evt) => {
@@ -69,11 +68,6 @@ export const handleSubmit = ({juego, peticion = -1}) => async (e) => {
                 console.log(videojuego);
                 postVideojuego(videojuego);
             })
-            break;
-
-        //Push
-        case 1:
-            updateVideojuego(juego)
             break;
 
         default:

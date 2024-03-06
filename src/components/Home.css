@@ -1,0 +1,48 @@
+/* Estilos generales para la aplicación */
+.Home {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-container {
+    background-color: #ADD8E6; /* Color de fondo deseado */
+  }
+  
+  /* Estilos para el contenido principal */
+  .content {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el contenedor del nav */
+  .nav-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  
+  /* Estilos para el nav */
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  /* Estilos para los enlaces de navegación */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px 12px; /* Añadido para más espacio alrededor del texto */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  /* Estilos para los enlaces activos */
+  nav a:active {
+    background-color: #007bff; /* Azul para el enlace activo */
+    font-weight: bold;
+  }
+  
+  /* Estilos para los enlaces hover */
+  nav a:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  }
+  

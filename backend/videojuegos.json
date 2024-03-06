@@ -1,15 +1,24 @@
 {
+  "users": [
+    {
+      "email": "JredondoP@outlook.es",
+      "password": "$2a$10$5PfPX.jeOSIG0Bw77DrgrOYtIHmCmzvBb9/leMOmEvBlJWt74COte",
+      "username": "javi",
+      "id": 1
+    }
+  ],
   "videojuegos": [
     {
       "id": 1,
       "nombre": "Red Dead Redemption 2",
       "descripcion": "Red Dead Redemption 2 es un videojuego de mundo abierto y acción-aventura ambientado en el lejano oeste, desarrollado por Rockstar Studios.",
-      "fecha_lanzamiento": "2018-10-26",
+      "fecha_lanzamiento": "2018/10/26",
       "compañia": "Rockstar Games",
       "plataformas": [
         "PS5",
         "XBOX ONE",
-        "PC"
+        "PC",
+        "Sin Plataforma"
       ],
       "categorias": [
         "Shooter",

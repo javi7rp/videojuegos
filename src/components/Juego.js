@@ -20,6 +20,26 @@ const Juego = (juego) => {
 
                 <img src={juego.url_imagen} alt={juego.nombre} />
 
+                <p>Plataformas:</p>
+                {
+                    juego.plataformas.length > 0 && (
+                        <span>{juego.plataformas.join(', ')}</span>
+                    )
+                }
+                <br/>
+                <br/>
+                <p>Categorias:</p>
+                {
+                    juego.categorias.length > 0 && (
+                        <span>{juego.categorias.join(', ')}</span>
+                    )
+                }
+                <br/>
+                <br/>
+                {
+                   juego.precio
+                }
+                <br />
                 {
                     juego.descripcion.length > 100
                         ? <p>{juego.descripcion.substring(0, 101)}...</p>

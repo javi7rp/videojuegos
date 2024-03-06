@@ -15,7 +15,7 @@ const InicioJuegos = () => {
     useEffect(() => {
         getCategorias().then(categorias => setCategoriasOptions(categorias));
         getPlataformas().then(plataformas => setPlataformasOptions(plataformas));
-    }, [categoriasOptions, plataformasOptions]);
+    }, []);
 
     return (
         <div className="container">
