@@ -1,0 +1,28 @@
+/* Estilos para el contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Estilos para el contenedor de categorías */
+.categorias-container {
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para el contenedor de plataformas */
+.plataformas-container {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.busqueda-container {
+    margin-bottom: 20px;
+}
+
+

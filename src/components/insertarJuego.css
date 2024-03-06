@@ -1,0 +1,55 @@
+/* Estilos para el contenedor principal */
+.contenedorFormulario {
+    width: 80%;
+    margin: auto;
+    background-color: #D3D3D3; 
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Estilos para el contenedor de atributos */
+  .contenedorAtributos {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para las etiquetas strong */
+  .contenedorAtributos strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los inputs */
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: calc(100% - 10px); /* Ajusta el ancho para evitar desbordamiento */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #FF5733; /* Borde naranja */
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el contenedor de checkboxes */
+  .contenedorCheckboxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para el grupo de checkboxes */
+  .grupoCheckbox {
+    flex: 1;
+  }
+  
+  /* Estilos para los checkboxes y labels */
+  .grupoCheckbox div {
+    margin-bottom: 5px;
+  }
+  
+  .grupoCheckbox input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .grupoCheckbox label {
+    display: inline-block;
+  }
+  

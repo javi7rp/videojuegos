@@ -55,27 +55,6 @@
       "precio": 39.99,
       "url_imagen": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png",
       "url_video": "https://www.youtube.com/watch?v=PjqsYzBrP-M"
-    },
-    {
-      "id": "4",
-      "nombre": "prueb",
-      "descripcion": "",
-      "fecha_lanzamiento": "2024/03/11",
-      "compañia": "mifeof",
-      "plataformas": [
-        "PS5",
-        "XBOX ONE",
-        "Switch",
-        "Android"
-      ],
-      "categorias": [
-        "Shooter",
-        "Lucha",
-        "Simulacion"
-      ],
-      "precio": 50,
-      "url_imagen": "fewfwf",
-      "url_video": "wfeefewf"
     }
   ],
   "categorias": [

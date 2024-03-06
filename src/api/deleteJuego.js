@@ -1,5 +1,5 @@
 export const deleteVideojuego = (videojuegoAEliminar) => {
-    const dbVideojuegos = `http://localhost:3003/videojuegos/${videojuegoAEliminar.id}`
+    const dbVideojuegos = `http://localhost:3000/videojuegos/${videojuegoAEliminar.id}`
 
     const requestOptions = {
         method: 'DELETE',

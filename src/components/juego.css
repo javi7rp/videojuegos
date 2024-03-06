@@ -1,0 +1,68 @@
+.contenedorJuegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+  }
+
+/* Estilos para el contenedor del juego */
+.contenedorVideojuego {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #E6F7FF; /* Azul */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el título del juego */
+  .contenedorVideojuego h2 {
+    color: #fff; /* Texto blanco */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la imagen del juego */
+  .contenedorVideojuego img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el texto del juego */
+  .contenedorVideojuego p {
+    color: #fff; /* Texto blanco */
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el modal */
+  .contenedorModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Estilos para el contenido del modal */
+  .contenidoModal {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  input.checkboxModal[type="checkbox"] {
+    display: none;
+  }
+  
+  input.checkboxModal[type="checkbox"]:checked + .contenedorModal {
+    opacity: 1;
+    pointer-events: auto;
+  }

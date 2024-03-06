@@ -1,4 +1,4 @@
-const dbVideojuegos = "http://localhost:3003/videojuegos"
+const dbVideojuegos = "http://localhost:3000/videojuegos"
 
 export const postVideojuego = (nuevoVideojuego) => {
     const requestOptions = {

@@ -1,4 +1,4 @@
-const dbCategorias = "http://localhost:3003/categorias"
+const dbCategorias = "http://localhost:3000/categorias"
 
 export const getCategorias = () => {
   return fetch(dbCategorias).then(res => res.json()).then(response => {
