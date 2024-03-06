@@ -1,4 +1,4 @@
-const dbVideojuegos = "http://localhost:3000/videojuegos"
+const dbVideojuegos = "http://localhost:3003/videojuegos"
 
 export const getJuegos = ({busqueda = '', busquedaCategorias = [''], busquedaPlataformas = ['']}, id = null) => {  
   return fetch(dbVideojuegos).then(res => res.json()).then(response => {

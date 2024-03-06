@@ -1,4 +1,4 @@
-const dbPlataformas = "http://localhost:3000/plataformas"
+const dbPlataformas = "http://localhost:3003/plataformas"
 
 export const getPlataformas = () => {
     return fetch(dbPlataformas).then(res => res.json()).then(response => {
