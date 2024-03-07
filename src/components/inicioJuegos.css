@@ -1,7 +1,9 @@
 /* Estilos para el contenedor principal */
-.container {
+.container-inicio {
     width: 80%;
     margin: auto;
+    display: flex;
+  justify-content: space-between;
 }
 
 /* Estilos para el contenedor de categorías */

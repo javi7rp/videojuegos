@@ -3,7 +3,7 @@ import JuegoList from './JuegoList';
 import CheckGroup from './CheckGroup';
 import { getCategorias } from '../api/getCategorias';
 import { getPlataformas } from '../api/getPlataformas';
-import './inicioJuegos.css'; 
+import './inicioJuegos.css';
 
 const InicioJuegos = () => {
     const [busqueda, setBusqueda] = useState('');
@@ -17,10 +17,11 @@ const InicioJuegos = () => {
         getPlataformas().then(plataformas => setPlataformasOptions(plataformas));
     }, []);
 
-    return (
-        <div className="container">
+    return (<div>
+
+        <div className="container-inicio">
             <div className="categorias-container">
-                <label htmlFor="categorias">Categorías</label>
+                <b><label htmlFor="categorias">Categorías</label></b>
                 {categoriasOptions.map(({ id, name }) => (
                     <CheckGroup
                         key={id}
@@ -32,7 +33,7 @@ const InicioJuegos = () => {
                 ))}
             </div>
             <div className="plataformas-container">
-                <label htmlFor="plataformas">Plataformas</label>
+            <b><label htmlFor="plataformas">Plataformas</label></b>
                 {plataformasOptions.map(({ id, name }) => (
                     <CheckGroup
                         key={id}
@@ -47,8 +48,9 @@ const InicioJuegos = () => {
                 <label htmlFor="busquedaPorNombre">Buscar por Nombre:</label>
                 <input type="text" defaultValue="" onChange={v => setBusqueda(v.target.value)} />
             </div>
-            <JuegoList busqueda={busqueda} busquedaCategorias={busquedaCategorias} busquedaPlataformas={busquedaPlataformas} />
         </div>
+            <JuegoList busqueda={busqueda} busquedaCategorias={busquedaCategorias} busquedaPlataformas={busquedaPlataformas} />
+    </div>
     );
 }
 

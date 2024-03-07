@@ -1,9 +1,6 @@
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
 import './Home.css';
-import InicioJuegos from './InicioJuegos';
-import InsertarJuego from './InsertarJuego';
-import Aboutus from './Aboutus';
 
 function Home() {
 
@@ -21,22 +18,16 @@ function Home() {
         <h1>PORTAL DE VIDEOJUEGOS</h1>
       </header>
       <div className="container">
-        <aside className="sidebar">
-          <nav>
+          <nav className='navigation-menu'>
             <ul>
-            <NavLink to="/videojuegos" activeClassName="active">Inicio</NavLink>&nbsp;
-            <NavLink to="/videojuegos/nuevo" activeClassName="active">Alta juego</NavLink>&nbsp;
-            <NavLink to="/acercade" activeClassName="active">Acerca de</NavLink>&nbsp;
-            <NavLink to="/" onClick={handleLogout}>Cerrar Sesión</NavLink>
+              <li><Link to="/videojuegos" >Inicio</Link></li>
+              <li><Link to="/nuevo" >Añadir Videojuego</Link></li>
+              <li><Link to="/acercade">Acerca de</Link></li>
+              <li><Link to="/" onClick={handleLogout}>Cerrar Sesión</Link></li>
             </ul>
           </nav>
-        </aside>
         <main className="content">
-        <Routes>
-          <Route exact path="/videojuegos" element={<InicioJuegos />} />
-          <Route exact path="/videojuegos/nuevo" element={<InsertarJuego />} />
-          <Route path="/acercade" element={<Aboutus />} />
-        </Routes>
+          <Outlet />
         </main>
       </div>
     </div>

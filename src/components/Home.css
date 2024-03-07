@@ -1,48 +1,49 @@
-/* Estilos generales para la aplicación */
-.Home {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .app-container {
-    background-color: #ADD8E6; /* Color de fondo deseado */
-  }
-  
-  /* Estilos para el contenido principal */
-  .content {
-    margin-top: 20px;
-  }
-  
-  /* Estilos para el contenedor del nav */
-  .nav-container {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-  }
-  
-  /* Estilos para el nav */
-  nav {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  /* Estilos para los enlaces de navegación */
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
-    padding: 8px 12px; /* Añadido para más espacio alrededor del texto */
-    border-radius: 4px; /* Bordes redondeados */
-  }
-  
-  /* Estilos para los enlaces activos */
-  nav a:active {
-    background-color: #007bff; /* Azul para el enlace activo */
-    font-weight: bold;
-  }
-  
-  /* Estilos para los enlaces hover */
-  nav a:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
-  }
-  
+/* Home.css */
+
+.home {
+  background-color: #2a96c9; /* Color de fondo */
+}
+
+.header {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: white; /* Color del texto del encabezado */
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  text-align: center; /* Centrar el contenido */
+  padding-top: 20px; /* Espacio superior para el contenido */
+}
+
+.navigation-menu {
+  background-color: #333; /* Color de fondo del menú */
+  overflow: hidden;
+}
+
+.navigation-menu ul {
+  list-style-type: none; /* Elimina los puntos de lista */
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-menu li {
+  display: inline-block; /* Mostrar los elementos en línea */
+}
+
+.navigation-menu li a {
+  display: block;
+  color: white; /* Color del texto */
+  text-align: center;
+  padding: 14px 16px; /* Espaciado alrededor del texto */
+  text-decoration: none;
+}
+
+/* Cambiar color de enlace al pasar el cursor */
+.navigation-menu li a:hover {
+  background-color: #555; /* Color de fondo al pasar el cursor */
+}
+
+.content {
+  margin-top: 20px;
+}

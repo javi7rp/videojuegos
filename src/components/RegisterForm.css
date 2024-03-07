@@ -1,16 +1,58 @@
+/* Estilos para el formulario de registro */
+
 .register-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  .register-form {
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura igual al tamaño de la ventana */
+  background-color: #f5f5f5; /* Color de fondo */
+}
+
+.register-form {
+  padding: 2rem; /* Espaciado interno */
+  background-color: rgb(81, 219, 196); /* Color de fondo del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 100%; /* Ancho completo */
+  max-width: 400px; /* Ancho máximo */
+}
+
+.register-form h2 {
+  margin-bottom: 1rem; /* Espaciado inferior */
+  font-size: 1.5rem; /* Tamaño del título */
+}
+
+.form-control {
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+.form-control label {
+  display: block; /* Mostrar etiqueta en bloque */
+  margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+.form-control input {
+  width: 100%; /* Ancho completo */
+  padding: 0.5rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border-radius: 4px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde */
+}
+
+.form-error {
+  color: red; /* Color del mensaje de error */
+  margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+.link-container {
+  margin-top: 1rem; /* Espaciado superior */
+}
+
+.link {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+.link:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}

@@ -5,6 +5,12 @@
       "password": "$2a$10$5PfPX.jeOSIG0Bw77DrgrOYtIHmCmzvBb9/leMOmEvBlJWt74COte",
       "username": "javi",
       "id": 1
+    },
+    {
+      "email": "prueba@ejemplo.es",
+      "password": "$2a$10$ddVsuT1vJ4sHPESsAedjBufU/4A7QnRpk5nSX2rgenppXin5kMo2C",
+      "username": "prueba",
+      "id": 2
     }
   ],
   "videojuegos": [
