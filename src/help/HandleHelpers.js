@@ -1,6 +1,4 @@
-import { deleteVideojuego } from "../api/deleteJuego";
-import { getJuegos } from "../api/getJuegos"
-import { postVideojuego } from "../api/postJuego"
+import { deleteVideojuego, getJuegos, postVideojuego } from "../api/videojuegoApi";
 
 
 export const handleChecked = (attrElegidas, setAttrElegidas, isChecked, setIsChecked) => (evt) => {
