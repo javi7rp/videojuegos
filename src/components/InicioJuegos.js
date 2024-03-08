@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JuegoList from './JuegoList';
 import CheckGroup from './CheckGroup';
-import { getCategorias } from '../api/getCategorias';
-import { getPlataformas } from '../api/getPlataformas';
+import { getCategorias, getPlataformas } from '../api/videojuegoApi';
 import './inicioJuegos.css';
 
 const InicioJuegos = () => {

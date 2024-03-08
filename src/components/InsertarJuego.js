@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getCategorias } from '../api/getCategorias'
-import { getPlataformas } from '../api/getPlataformas'
+import { getCategorias, getPlataformas } from '../api/videojuegoApi';
 import { formHandleChecked, handleChange, handleSubmit } from '../help/HandleHelpers'
 import './insertarJuego.css'
 

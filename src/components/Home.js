@@ -32,42 +32,6 @@ function Home() {
       </div>
     </div>
   );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// eslint-disable-next-line no-lone-blocks
-{/*
-  return (
-    <div className="app-container">
-      <div className="App">
-        <div className="nav-container">
-          <nav>
-            <NavLink to="/videojuegos" activeClassName="active">Inicio</NavLink>&nbsp;
-            <NavLink to="/videojuegos/nuevo" activeClassName="active">Alta juego</NavLink>&nbsp;
-            <NavLink to="/acercade" activeClassName="active">Acerca de</NavLink>&nbsp;
-
-          </nav>
-        </div>
-        <Routes>
-          <Route exact path="/videojuegos" element={<InicioJuegos />} />
-          <Route exact path="/videojuegos/nuevo" element={<InsertarJuego />} />
-          <Route path="/acercade" element={<Aboutus />} />
-        </Routes>
-      </div>
-    </div>
-  );
-  */}
 }
 
 export default Home;
